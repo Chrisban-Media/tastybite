@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # TastyBite
 
 TastyBite is a simple, responsive restaurant landing page built with plain HTML CSS and Javascript.
@@ -37,3 +38,7 @@ No build tools or dependencies are required.
 ## License
 
 This project is available for personal and educational use.
+=======
+# tastybite
+TastyBite is a simple, responsive restaurant landing page built with plain HTML CSS and Javascript.
+>>>>>>> b686eb7cd2baddcefb18510dbd03bfaf23cafbc0
