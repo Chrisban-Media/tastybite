@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TastyBite | Cart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="subpage cart-page">
+    <header class="site-header">
+        <div class="header-note">Fresh meals, made daily <span>•</span> Open until 10:30 PM</div>
+        <nav class="navbar" aria-label="Main navigation">
+            <a class="logo" href="index.html" aria-label="TastyBite home">Tasty<span>Bite</span><small>Kitchen</small></a>
+
+            <div class="mobile-controls">
+                <button class="theme-toggle mobile-theme-toggle" type="button" aria-label="Toggle dark mode">🌙</button>
+                <button class="menu-toggle" type="button" aria-label="Open navigation" aria-controls="site-navigation" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+
+            <ul class="nav-links" id="site-navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="cart.html">Cart <span class="cart-count">0</span></a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button class="theme-toggle" type="button" aria-label="Toggle dark mode">🌙</button>
+                <a href="menu.html" class="btn">Continue Shopping</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="page-hero">
+        <div class="page-hero-content">
+            <p class="small-title">YOUR CART</p>
+            <h1>Ready for checkout.</h1>
+            <p>Review your delicious picks and complete your order in a few quick steps.</p>
+        </div>
+    </section>
+
+    <section class="page-section cart-layout">
+        <div class="cart-panel">
+            <div class="cart-header">
+                <h2>Cart Items</h2>
+                <a href="menu.html">Add more</a>
+            </div>
+            <div id="cart-items" class="cart-items"></div>
+        </div>
+
+        <aside class="checkout-panel">
+            <h2>Order Summary</h2>
+            <div class="summary-row">
+                <span>Subtotal</span>
+                <strong id="subtotal">₦0</strong>
+            </div>
+            <div class="summary-row">
+                <span>Delivery</span>
+                <strong id="delivery">₦1,500</strong>
+            </div>
+            <div class="summary-row total-row">
+                <span>Total</span>
+                <strong id="total">₦1,500</strong>
+            </div>
+
+            <form id="checkout-form" class="checkout-form">
+                <div class="form-group">
+                    <label for="full-name">Full name</label>
+                    <input id="full-name" type="text" placeholder="Your full name" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">Delivery address</label>
+                    <textarea id="address" rows="4" placeholder="Your delivery address" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="payment">Payment method</label>
+                    <select id="payment" required>
+                        <option value="">Select payment method</option>
+                        <option>Card</option>
+                        <option>Bank Transfer</option>
+                        <option>Cash on Delivery</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn checkout-btn">Place Order</button>
+            </form>
+        </aside>
+    </section>
+
+    <section class="page-section eta-section">
+        <div class="section-heading">
+            <p>DELIVERY ETA</p>
+            <h2>Track your order</h2>
+            <span>From kitchen to doorstep, here’s the journey.</span>
+        </div>
+
+        <div class="eta-timeline">
+            <div class="eta-step active">
+                <span class="step-bullet">1</span>
+                <div>
+                    <strong>Order Received</strong>
+                    <p>Confirmed and sent to the kitchen.</p>
+                </div>
+                <time>Now</time>
+            </div>
+            <div class="eta-step">
+                <span class="step-bullet">2</span>
+                <div>
+                    <strong>Preparing</strong>
+                    <p>Fresh ingredients are being cooked.</p>
+                </div>
+                <time>10 min</time>
+            </div>
+            <div class="eta-step">
+                <span class="step-bullet">3</span>
+                <div>
+                    <strong>On the Way</strong>
+                    <p>Your rider is heading to your location.</p>
+                </div>
+                <time>25 min</time>
+            </div>
+            <div class="eta-step">
+                <span class="step-bullet">4</span>
+                <div>
+                    <strong>Delivered</strong>
+                    <p>Enjoy your meal at home.</p>
+                </div>
+                <time>35-40 min</time>
+            </div>
+        </div>
+    </section>
+
+    <div id="checkout-modal" class="checkout-modal hidden" aria-hidden="true">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+            <button class="modal-close" type="button" aria-label="Close checkout confirmation">×</button>
+            <p class="small-title">ORDER REVIEW</p>
+            <h3 id="modal-title">Your order is ready to confirm.</h3>
+            <p id="modal-summary">We’ve prepared your delicious meal for delivery.</p>
+            <div class="modal-order-total">
+                <span>Total</span>
+                <strong id="modal-total">₦1,500</strong>
+            </div>
+            <div class="modal-actions">
+                <button type="button" class="btn btn-outline modal-edit">Edit Details</button>
+                <button type="button" id="confirm-order" class="btn">Confirm Order</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="logo">Tasty<span>Bite</span></div>
+        <p>Serving delicious moments, one meal at a time.</p>
+        <p class="copyright">© 2026 TastyBite. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -9,18 +9,32 @@
 <body>
 
     <!-- Header -->
-    <header>
-        <nav class="navbar">
-            <div class="logo">Tasty<span>Bite</span></div>
+    <header class="site-header">
+        <div class="header-note">Fresh meals, made daily <span>•</span> Open until 10:30 PM</div>
+        <nav class="navbar" aria-label="Main navigation">
+            <a class="logo" href="index.html" aria-label="TastyBite home">Tasty<span>Bite</span><small>Kitchen</small></a>
 
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#menu">Menu</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+            <div class="mobile-controls">
+                <button class="theme-toggle mobile-theme-toggle" type="button" aria-label="Toggle dark mode">🌙</button>
+                <button class="menu-toggle" type="button" aria-label="Open navigation" aria-controls="site-navigation" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+
+            <ul class="nav-links" id="site-navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="cart.html">Cart <span class="cart-count">0</span></a></li>
             </ul>
 
-            <a href="#menu" class="btn">Order Now</a>
+            <div class="nav-actions">
+                <button class="theme-toggle" type="button" aria-label="Toggle dark mode">🌙</button>
+                <a href="menu.html" class="btn">Order Now</a>
+            </div>
         </nav>
     </header>
 
@@ -38,8 +52,8 @@
             </p>
 
             <div class="hero-buttons">
-                <a href="#menu" class="btn">Explore Menu</a>
-                <a href="#about" class="btn btn-outline">Learn More</a>
+                <a href="menu.html" class="btn">Explore Menu</a>
+                <a href="about.html" class="btn btn-outline">Learn More</a>
             </div>
         </div>
 
@@ -101,6 +115,112 @@
         </div>
     </section>
 
+    <section class="promo-section">
+        <div class="section-heading">
+            <p>CHEF'S FAVORITES</p>
+            <h2>Weekend Deals & Promos</h2>
+            <span>Handpicked picks with extra value for your next craving.</span>
+        </div>
+
+        <div class="promo-grid">
+            <article class="promo-card">
+                <span class="promo-badge">20% OFF</span>
+                <h3>Family Feast Combo</h3>
+                <p>2 burgers, 1 pasta, 2 drinks and dessert for the whole table.</p>
+                <strong>₦12,500</strong>
+            </article>
+            <article class="promo-card highlight">
+                <span class="promo-badge">BESTSELLER</span>
+                <h3>Pizza Night</h3>
+                <p>Large chef special pizza, garlic bread, and fresh salad.</p>
+                <strong>₦9,800</strong>
+            </article>
+            <article class="promo-card">
+                <span class="promo-badge">NEW</span>
+                <h3>Healthy Lunch Box</h3>
+                <p>Garden salad, grilled chicken, fruit smoothie and yogurt.</p>
+                <strong>₦7,200</strong>
+            </article>
+        </div>
+    </section>
+
+    <section class="rewards-section">
+        <div class="section-heading">
+            <p>LOYALTY CLUB</p>
+            <h2>Earn rewards every bite.</h2>
+            <span>Enjoy perks, surprise offers, and free treats as you keep ordering.</span>
+        </div>
+
+        <div class="rewards-layout">
+            <div class="reward-card reward-highlight">
+                <div class="reward-badge">Tier Gold</div>
+                <h3>6 Stars</h3>
+                <p>Free dessert on your next order and 10% savings on selected menu items.</p>
+                <div class="reward-progress">
+                    <span style="width: 65%"></span>
+                </div>
+                <small>65% to the next reward</small>
+            </div>
+
+            <div class="reward-points">
+                <div class="point-item">
+                    <strong>1,250</strong>
+                    <span>Points earned</span>
+                </div>
+                <div class="point-item">
+                    <strong>3x</strong>
+                    <span>Bonus weekends</span>
+                </div>
+                <div class="point-item">
+                    <strong>Free</strong>
+                    <span>Delivery on gold</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials-section">
+        <div class="section-heading">
+            <p>REVIEWS</p>
+            <h2>What our guests say</h2>
+            <span>Real memories from real customers.</span>
+        </div>
+
+        <div class="testimonial-carousel">
+            <div class="testimonial-slide active">
+                <div class="stars">★★★★★</div>
+                <p>“The quality is outstanding and the food arrives fresh every single time. It feels like restaurant dining at home.”</p>
+                <div class="customer">
+                    <strong>Amara O.</strong>
+                    <span>Food blogger</span>
+                </div>
+            </div>
+
+            <div class="testimonial-slide">
+                <div class="stars">★★★★★</div>
+                <p>“The burgers are juicy, the pizza is perfectly baked, and the service feels personal and warm. Highly recommended.”</p>
+                <div class="customer">
+                    <strong>Tobi A.</strong>
+                    <span>Regular customer</span>
+                </div>
+            </div>
+
+            <div class="testimonial-slide">
+                <div class="stars">★★★★★</div>
+                <p>“TastyBite has become my go-to for lunch meetings. The menu is varied, the portions are generous, and the delivery is fast.”</p>
+                <div class="customer">
+                    <strong>Grace M.</strong>
+                    <span>Business owner</span>
+                </div>
+            </div>
+
+            <div class="carousel-controls">
+                <button type="button" class="carousel-btn prev" aria-label="Previous testimonial">‹</button>
+                <button type="button" class="carousel-btn next" aria-label="Next testimonial">›</button>
+            </div>
+        </div>
+    </section>
+
     <!-- About Section -->
     <section class="about" id="about">
         <div class="about-image">
@@ -117,7 +237,7 @@
                 great recipes and plenty of passion.
             </p>
 
-            <a href="#contact" class="btn">Visit Us Today</a>
+            <a href="contact.html" class="btn">Visit Us Today</a>
         </div>
     </section>
 
@@ -139,5 +259,6 @@
         <p class="copyright">© 2026 TastyBite. All Rights Reserved.</p>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
